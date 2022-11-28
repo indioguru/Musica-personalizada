@@ -77,20 +77,38 @@
 //---------------------Fuentes--------------------------//
 @font-face {
   font-family: "sans-mediun";
-  src: url(/Assets/Noto_Sans/NotoSans-Medium.ttf) format("truetype");
+  src: url("/Assets/Noto_Sans/NotoSans-Medium.ttf") format("truetype"),
+    url("/Assets/Noto_Sans/NotoSans-medium/NotoSans-Medium.eot") format("eot"),
+    url("/Assets/Noto_Sans/NotoSans-medium/NotoSans-Medium.woff") format("woff"),
+    url("/Assets/Noto_Sans/NotoSans-medium/NotoSans-Medium.woff2")
+      format("woff2");
 }
 
 @font-face {
   font-family: "sans-bold";
-  src: url(/Assets/Noto_Sans/NotoSans-Bold.ttf) format("truetype");
+  src: url("/Assets/Noto_Sans/NotoSans-Bold.ttf") format("truetype"),
+    url("/Assets/Noto_Sans/NotoSans-bold/NotoSans-Bold.eot") format("eot"),
+    url("/Assets/Noto_Sans/NotoSans-bold/NotoSans-Bold.woff") format("woff"),
+    url("/Assets/Noto_Sans/NotoSans-bold/NotoSans-Bold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "sans-regular";
-  src: url(/Assets/Noto_Sans/NotoSans-Regular.ttf) format("truetype");
+  src: url("/Assets/Noto_Sans/NotoSans-Regular.ttf") format("truetype"),
+    url("/Assets/Noto_Sans/NotoSans-regular/NotoSans-Regular.eot") format("eot"),
+    url("/Assets/Noto_Sans/NotoSans-regular/NotoSans-Regular.woff")
+      format("woff"),
+    url("/Assets/Noto_Sans/NotoSans-regular/NotoSans-Regular.woff2")
+      format("woff2");
 }
 
 @font-face {
   font-family: "sans-semibold";
-  src: url(/Assets/Noto_Sans/NotoSans-SemiBold.ttf) format("truetype");
+  src: url("/Assets/Noto_Sans/NotoSans-SemiBold.ttf") format("truetype"),
+    url("/Assets/Noto_Sans/NotoSans-semibold/NotoSans-SemiBold.eot")
+      format("eot"),
+    url("/Assets/Noto_Sans/NotoSans-semibold/NotoSans-SemiBold.woff")
+      format("woff"),
+    url("/Assets/Noto_Sans/NotoSans-semibold/NotoSans-SemiBold.woff2")
+      format("woff2");
 }
