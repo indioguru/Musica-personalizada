@@ -2,15 +2,38 @@
   background-color: $backgroundAll;
   display: flex;
   justify-content: center;
- 
+
   &_container h1 {
-    padding-top: 150px;
+    padding-top: 20px;
     padding-bottom: 20px;
     color: $letter-color-one;
     font-family: $font-one-bold;
+    font-size: 20px;
   }
 
   &_container {
+    .alert {
+      color: #f62da8;
+      position: absolute;
+      bottom: -25px;
+      left: 25px;
+      font-family: $font-one;
+    }
+
+    .alert img {
+      width: 20px;
+      left: -25px;
+      position: absolute;
+    }
+    .content_steps {
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .circle:nth-of-type(3) {
+      background: transparent;
+    }
+
     .content_forms {
       .input {
         margin: 50px 0px;
@@ -20,6 +43,7 @@
       .input input {
         margin-top: 10px;
         font-family: $font-one-semibold;
+        transition: scale, 0.4s ease;
       }
 
       .input label {
@@ -27,12 +51,17 @@
         position: absolute;
         bottom: 55px;
       }
+
+      .input input:focus {
+        transform: scale(1.05);
+        transition: scale, 0.4s ease;
+      }
     }
 
     .content_dropdown {
-      margin: 60px 0px;
-
+      margin: 100px 0px;
       position: relative;
+      border: 2px gray solid;
       width: 100%;
       background: $background-color-inputs;
       height: $height-inputs;
@@ -40,10 +69,41 @@
       font-family: $font-one-semibold;
 
       .img img {
-        width: 8%;
+        width: 7%;
         position: absolute;
         right: 10px;
-        top: 20px;
+        top: 18px;
+        transition: rotate, 0.2s ease;
+      }
+
+      .img2 img {
+        width: 7%;
+        position: absolute;
+        right: 10px;
+        top: 13px;
+        transition: rotate, 0.2s ease;
+        transform: rotate(3.142rad);
+      }
+
+      .content_info_dropdown_close {
+        height: 0px;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .content_info_dropdown {
+        height: 300px;
+        opacity: 1;
+        transition: height, 0.3s ease;
+        position: absolute;
+        width: 100%;
+        background-color: $background-select-input;
+      }
+
+      .content_info_dropdown p {
+        padding: 10px;
+        font-family: $font-one;
+        color: $color-label;
       }
     }
     .label {
@@ -51,6 +111,16 @@
       position: absolute;
       bottom: 55px;
       color: $color-label;
+    }
+
+    @media (hover: hover) {
+      .content_dropdown:hover {
+        cursor: pointer;
+      }
+    }
+
+    .label span {
+      color: #f62da8;
     }
 
     .info-dropdown {
@@ -71,12 +141,22 @@
     height: 100vh;
 
     &_container h1 {
-      padding-top: 100px;
+      padding-top: 170px;
       text-align: center;
-      padding-bottom: 100px;
+      padding-bottom: 50px;
+      font-size: 35px;
     }
 
     &_container {
+      .content_dropdown {
+        margin: 60px 0;
+      }
+      .content_steps {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: -10px;
+      }
       .content_forms {
         display: flex;
         justify-content: space-around;

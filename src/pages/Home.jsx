@@ -8,7 +8,7 @@ const Home = () => {
       <div className="home_container containerAll">
         <div className="content_info">
           <h1>CANCIÓN DE CUMPLEAÑOS</h1>
-          <p>Crea tu Canción personalizada de Canti Rondas </p>
+          <p>Crea tu canción personalizada de Canti Rondas.</p>
         </div>
         <div className="content_buttons">
           <div className="button_one">

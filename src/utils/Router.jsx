@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
@@ -8,13 +8,18 @@ import NamePage from "../pages/namePage/NamePage";
 import Song from "../pages/Song";
 
 const Router = () => {
+  const [search, setSearch] = useState("");
+
   return (
     <HashRouter>
       <Logo />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/namePage" element={<NamePage />} />
-        <Route path="/aboutYou" element={<AboutYou />} />
+        <Route
+          path="/namePage"
+          element={<NamePage setSearch={setSearch} search={search} />}
+        />
+        <Route path="/aboutYou" element={<AboutYou search={search} />} />
         <Route path="/song" element={<Song />} />
       </Routes>
       <Footer />

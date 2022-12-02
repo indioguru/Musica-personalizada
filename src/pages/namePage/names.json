@@ -31,6 +31,20 @@
     {
       "id": 8,
       "nombre": "Jorge"
+    },
+    {
+      "id": 9,
+      "nombre": "bebé"
+    },
+    {
+      "id": 10,
+      "nombre": "chiquito"
+    },
+    {
+      "id": 11,
+      "nombre": "chiquita"
     }
+
+    
   ]
 }

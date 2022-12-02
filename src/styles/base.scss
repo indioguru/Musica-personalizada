@@ -17,7 +17,7 @@
 }
 
 .button_one button {
-  background-color: $Background-Color-button-one;
+  background: $Background-Color-button-one;
   font-size: $font-size-buttons;
   width: 100%;
   height: $height-buttons;
@@ -33,7 +33,7 @@
 }
 
 .button_two button {
-  background-color: $Background-Color-button-two;
+  background: $Background-Color-button-two;
   font-size: $font-size-buttons;
   font-family: $font-one-semibold;
   width: 100%;
@@ -42,17 +42,20 @@
   color: white;
   border: none;
   border-radius: 50px;
-  opacity: 0.5;
   border: 1px gray solid;
 }
 
 @media (hover: hover) {
   .button_one button:hover {
+    background: white;
+    color: black;
     cursor: pointer;
   }
 
   .button_two button:hover {
     cursor: pointer;
+    background: transparent linear-gradient(99deg, #f62da89e 0%, #fc044178 100%)
+      0% 0% no-repeat padding-box;
   }
 }
 
@@ -60,7 +63,7 @@
 
 .input input {
   width: 100%;
-  background-color: $background-color-inputs;
+  background: $background-color-inputs;
   font-size: $font-size-inputs;
   height: $height-inputs;
   max-width: $max-width-inputs;
@@ -111,4 +114,34 @@
       format("woff"),
     url("/Assets/Noto_Sans/NotoSans-semibold/NotoSans-SemiBold.woff2")
       format("woff2");
+}
+
+//---------------------Steps--------------------------//
+
+.content_steps {
+  .content_circles {
+    display: flex;
+    justify-content: center;
+  }
+  .circle {
+    margin: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: $background-color-step;
+    border: 1px $color-border-step solid;
+  }
+
+  @media (min-width: 750px) {
+    .circle {
+      margin: 5px;
+      width: 23px;
+      height: 23px;
+    }
+  }
+}
+
+.content_steps p {
+  color: $letter-color-one;
+  font-family: $font-one;
 }

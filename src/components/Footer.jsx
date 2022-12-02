@@ -22,12 +22,12 @@ const Footer = () => {
 
         <div className="content_policy">
           <a href="https://www.youtube.com/watch?v=Yabi_nCGXdo&ab_channel=Yanah">
-            Politicas de privacidad
+            Políticas de privacidad
           </a>
         </div>
 
         <div className="content_rights">
-          <p>@ 2023 FM Entretenimiento </p>
+          <p>© 2023 FM Entretenimiento </p>
         </div>
       </div>
     </div>

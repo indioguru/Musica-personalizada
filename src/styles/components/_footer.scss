@@ -11,7 +11,7 @@
       max-width: 400px;
       margin: 0 auto;
       .youtube {
-        background-color: $color-background-icons;
+        background: $color-background-icons;
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -20,10 +20,10 @@
         align-items: center;
       }
       .youtube img {
-        width: 70%;
+        width: 60%;
       }
       .instagram {
-        background-color: $color-background-icons;
+        background: $color-background-icons;
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -36,7 +36,7 @@
         object-fit: cover;
       }
       .facebook {
-        background-color: $color-background-icons;
+        background: $color-background-icons;
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -48,7 +48,7 @@
         width: 30%;
       }
       .spotify {
-        background-color: $color-background-icons;
+        background: $color-background-icons;
         width: 50px;
         height: 50px;
         border-radius: 50%;

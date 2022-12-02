@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import nombres from "./names.json";
 
-const NamePage = () => {
+const NamePage = ({ setSearch, search }) => {
   const navigate = useNavigate();
   const [isInputShow, setIsInputShow] = useState(false);
   const [allNames, setAllNames] = useState([]);
-  const [search, setSearch] = useState("");
+
   const [usersFilter, setUsersFilter] = useState([]);
   const [allowedContinue, setAllowedContinue] = useState(true);
+
   useEffect(() => {
     setAllNames(nombres.nombre);
     setUsersFilter(nombres.nombre);
@@ -20,6 +21,7 @@ const NamePage = () => {
       if (allNames[i].nombre.toString().toLowerCase() === valueSearch) {
         setAllowedContinue(true);
         navigate("/aboutYou");
+        setSearch(search);
         break;
       } else {
         setAllowedContinue(false);
@@ -58,9 +60,17 @@ const NamePage = () => {
   return (
     <div className="namePage">
       <div className="namePage_container containerAll">
+        <div className="content_steps">
+          <div className="content_circles">
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+          </div>
+          <p>Paso 1</p>
+        </div>
         {allowedContinue ? (
           <div className="content_header">
-            <h1>¿A quien quieres que le dediquemos la canción?</h1>
+            <h1>¿ A quién quieres que le dediquemos la canción?</h1>
             <p>Escribe su nombre.</p>
           </div>
         ) : (
@@ -68,8 +78,10 @@ const NamePage = () => {
             <div className="content_img">
               <img src="/Assets/error.png" alt="" />
             </div>
-            <p>Lo sentimos, ese nombre no esta disponible.</p>
-            <p>Te recomendamos Seleccionar una de las siguientes opciones.</p>
+            <p>Lo sentimos, ese nombre no está disponible.</p>
+            <p>
+              Te recomendamos seleccionar alguna de las opciones disponibles.
+            </p>
           </div>
         )}
 

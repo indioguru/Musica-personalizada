@@ -3,19 +3,62 @@
   display: flex;
   justify-content: center;
   &_container {
-    .content_img {
+    .content_steps {
+      text-align: center;
+      padding-top: 100px;
+    }
+    .content_audio {
       text-align: center;
       padding-bottom: 80px;
-    }
 
-    .content_img img {
-      width: 100%;
-      max-width: 370px;
+      @media (hover: hover) {
+        img:hover {
+          cursor: pointer;
+        }
+      }
+      .content {
+        position: relative;
+        border-radius: 50px;
+        margin: 0 auto;
+
+        img {
+          width: 80px;
+
+          margin: 0 auto;
+        }
+      }
     }
 
     .content_buttons {
-      .button_one {
+      text-align: center;
+
+      .content_a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding-bottom: 25px;
+      }
+      a {
+        text-align: center;
+        padding-top: 10px;
+        background: $Background-Color-button-one;
+        font-size: $font-size-buttons;
+        width: 100%;
+        height: $height-buttons;
+        max-width: $max-width-buttons;
+        font-family: $font-one-semibold;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        text-decoration: none;
+      }
+
+      @media (hover: hover) {
+        a:hover {
+          background: white;
+          color: black;
+          cursor: pointer;
+        }
       }
 
       .button_two {
@@ -25,16 +68,17 @@
   }
 
   &_container h1 {
-    padding-top: 150px;
+    padding-top: 30px;
     padding-bottom: 80px;
     color: $letter-color-one;
     font-family: $font-one;
-    font-size: 15px;
+    font-size: 18px;
   }
 
   &_container h1 span {
-    color: $letter-color-two;
-    font-family: $font-one;
+    color: $letter-color-one;
+    font-family: $font-one-regular;
+    font-weight: 100;
     font-size: 15px;
   }
 
@@ -49,9 +93,24 @@
     }
 
     &_container {
+      .content_steps {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: -10px;
+      }
       height: 100vh;
       .content_buttons {
         display: flex;
+        margin-top: 50px;
+      }
+
+      .content_audio {
+        .content {
+          img {
+            width: 100px;
+          }
+        }
       }
 
       .content_buttons > * {
