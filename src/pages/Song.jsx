@@ -25,7 +25,7 @@ const Song = () => {
 
   useEffect(() => {
     if (waveSurfer) {
-      waveSurfer.load("/Assets/Audio/1.mp3");
+      waveSurfer.load("/assets/Audio/1.mp3");
     }
   }, [waveSurfer]);
 
@@ -57,17 +57,17 @@ const Song = () => {
               descargarla.
             </span>
           </h1>
-          <audio id="audio" src="/Assets/Audio/1.mp3"></audio>
+          <audio id="audio" src="/assets/Audio/1.mp3"></audio>
           <div className="content_audio">
             {isPlaying ? (
               <img
-                src="/Assets/pausa.png"
+                src="/assets/pausa.png"
                 alt=""
                 onClick={() => togglePlayPause()}
               />
             ) : (
               <img
-                src="/Assets/play.png"
+                src="/assets/play.png"
                 alt=""
                 onClick={() => togglePlayPause()}
               />
@@ -76,7 +76,7 @@ const Song = () => {
           </div>
           <div className="content_buttons">
             <div className="content_a">
-              <a href="/Assets/Audio/1.mp3" download>
+              <a href="/assets/Audio/1.mp3" download>
                 Descargar
               </a>
             </div>

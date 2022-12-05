@@ -81,7 +81,7 @@ const AboutYou = ({ search }) => {
                 />
                 {formErrors.name != null ? (
                   <div className="alert">
-                    <img src="/Assets/error.png" alt="" />
+                    <img src="/assets/error.png" alt="" />
                     <p> {formErrors.name}</p>
                   </div>
                 ) : (
@@ -99,7 +99,7 @@ const AboutYou = ({ search }) => {
                 />
                 {formErrors.lastName != null ? (
                   <div className="alert">
-                    <img src="/Assets/error.png" alt="" />
+                    <img src="/assets/error.png" alt="" />
                     <p> {formErrors.lastName}</p>
                   </div>
                 ) : (
@@ -117,7 +117,7 @@ const AboutYou = ({ search }) => {
                 />
                 {formErrors.email != null ? (
                   <div className="alert">
-                    <img src="/Assets/error.png" alt="" />
+                    <img src="/assets/error.png" alt="" />
                     <p> {formErrors.email}</p>
                   </div>
                 ) : (
@@ -138,7 +138,7 @@ const AboutYou = ({ search }) => {
                 />
                 {formErrors.phone != null ? (
                   <div className="alert">
-                    <img src="/Assets/error.png" alt="" />
+                    <img src="/assets/error.png" alt="" />
                     <p> {formErrors.phone}</p>
                   </div>
                 ) : (
@@ -154,13 +154,13 @@ const AboutYou = ({ search }) => {
                   ¿Cuál es tu parentesco con <span>{search}</span>?
                 </p>
                 <div className={`${!dropdownActive ? "img" : "img2"}`}>
-                  <img src="/Assets/abajo.png" alt="" />
+                  <img src="/assets/abajo.png" alt="" />
                 </div>
                 <p className="info-dropdown">{valueDropdown}</p>
 
                 {valueDropdown === "Selecciona tu parentesco" && isSubmit ? (
                   <div className="alert">
-                    <img src="/Assets/error.png" alt="" />
+                    <img src="/assets/error.png" alt="" />
                     <p> Tu parentesco es requerido</p>
                   </div>
                 ) : (

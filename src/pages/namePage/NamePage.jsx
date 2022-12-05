@@ -76,7 +76,7 @@ const NamePage = ({ setSearch, search }) => {
         ) : (
           <div className="content_header_error">
             <div className="content_img">
-              <img src="/Assets/error.png" alt="" />
+              <img src="/assets/error.png" alt="" />
             </div>
             <p>Lo sentimos, ese nombre no está disponible.</p>
             <p>
