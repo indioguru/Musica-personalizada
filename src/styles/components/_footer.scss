@@ -59,11 +59,28 @@
       .spotify img {
         width: 60%;
       }
+
+      @media (hover: hover) {
+        .youtube:hover {
+          cursor: pointer;
+        }
+
+        .instagram:hover {
+          cursor: pointer;
+        }
+
+        .spotify:hover {
+          cursor: pointer;
+        }
+        .facebook:hover {
+          cursor: pointer;
+        }
+      }
     }
 
     .content_policy {
       text-align: center;
-    
+
       padding-bottom: 25px;
     }
 

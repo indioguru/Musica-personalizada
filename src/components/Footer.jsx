@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
 
         <div className="content_policy">
-          <a href="https://www.youtube.com/watch?v=Yabi_nCGXdo&ab_channel=Yanah">
+          <a href="/assets/PdfPrueba.pdf" download>
             Políticas de privacidad
           </a>
         </div>
