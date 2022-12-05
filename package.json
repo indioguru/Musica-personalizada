@@ -13,7 +13,8 @@
     "react-dom": "^18.2.0",
     "react-media": "^1.10.0",
     "react-router-dom": "^6.4.3",
-    "sass": "^1.56.1"
+    "sass": "^1.56.1",
+    "wavesurfer.js": "^6.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",

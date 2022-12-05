@@ -3,35 +3,46 @@
   display: flex;
   justify-content: center;
   &_container {
+    height: 100vh;
     .content_steps {
       text-align: center;
       padding-top: 100px;
     }
     .content_audio {
-      text-align: center;
-      padding-bottom: 80px;
-
-      @media (hover: hover) {
-        img:hover {
-          cursor: pointer;
-        }
+      margin: 0 auto;
+      height: 80px;
+      max-width: 300px;
+      background: #ffffff26 0% 0% no-repeat padding-box;
+      border: 2px solid #b0a4a4;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 10px;
+      gap: 1rem;
+      img {
+        flex: 1 1 10%;
+        max-width: 40px;
       }
-      .content {
-        position: relative;
-        border-radius: 50px;
-        margin: 0 auto;
+    }
 
-        img {
-          width: 80px;
+    #waveform {
+      flex: 1 1 80%;
+      align-self: center;
+    }
 
-          margin: 0 auto;
-        }
+    @media (hover: hover) {
+      .content_audio img:hover {
+        cursor: pointer;
+      }
+      #waveform:hover {
+        cursor: pointer;
       }
     }
 
     .content_buttons {
       text-align: center;
-
+      margin-top: 80px;
       .content_a {
         display: flex;
         justify-content: center;
@@ -69,10 +80,10 @@
 
   &_container h1 {
     padding-top: 30px;
-    padding-bottom: 80px;
     color: $letter-color-one;
     font-family: $font-one;
     font-size: 18px;
+    margin-bottom: 80px;
   }
 
   &_container h1 span {
@@ -93,6 +104,16 @@
     }
 
     &_container {
+      .content_audio {
+        max-width: 400px;
+        height: 110px;
+        margin: 0 auto;
+        border-radius: 40px;
+        img {
+          max-width: 60px;
+        }
+      }
+
       .content_steps {
         position: absolute;
         right: 0;
@@ -102,15 +123,7 @@
       height: 100vh;
       .content_buttons {
         display: flex;
-        margin-top: 50px;
-      }
-
-      .content_audio {
-        .content {
-          img {
-            width: 100px;
-          }
-        }
+        margin-top: 80px;
       }
 
       .content_buttons > * {

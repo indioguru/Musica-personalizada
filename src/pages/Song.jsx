@@ -1,23 +1,42 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import WaveSurfer from "wavesurfer.js";
 const Song = () => {
   const navigate = useNavigate();
 
-  // const [actualPositionSound, setActualPositionSound] = useState("");
-  // const [completeSound, setCompleteSound] = useState();
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [waveSurfer, setWaveSurfer] = useState(null);
 
-  const [play, setPlay] = useState(false);
+  useEffect(() => {
+    setWaveSurfer(
+      WaveSurfer.create({
+        container: "#waveform",
+        barWidth: 3,
+        barRadius: 3,
+        responsive: true,
+        barHeight: 1.5,
+        height: 60,
+        hideScrollbar: true,
+        waveColor: "#b0a4a463",
+        progressColor: "#ffffff",
+      })
+    );
+  }, []);
 
-  // useEffect(() => {
-  //   setCompleteSound(document.getElementById("audio").duration);
-  //   prueba();
-  //   console.log(actualPositionSound);
-  // }, [actualPositionSound, completeSound]);
+  useEffect(() => {
+    if (waveSurfer) {
+      waveSurfer.load("/Assets/Audio/1.mp3");
+    }
+  }, [waveSurfer]);
 
-  // const prueba = () => {
-  //   setActualPositionSound(document.getElementById("audio").currentTime);
-  // };
+  const togglePlayPause = () => {
+    waveSurfer.playPause();
+    setIsPlaying(!isPlaying);
+  };
+
+  const CancelSound = () => {
+    waveSurfer.destroy();
+  };
 
   return (
     <div className="song">
@@ -40,34 +59,21 @@ const Song = () => {
           </h1>
           <audio id="audio" src="/Assets/Audio/1.mp3"></audio>
           <div className="content_audio">
-            <div className="content">
-              {!play ? (
-                <img
-                  onClick={() => {
-                    document.getElementById("audio").play();
-                    setPlay(!play);
-                  }}
-                  src="/Assets/play.png"
-                  alt=""
-                />
-              ) : (
-                <img
-                  onClick={() => {
-                    document.getElementById("audio").pause();
-                    setPlay(!play);
-                  }}
-                  src="/Assets/pausa.png"
-                  alt=""
-                />
-              )}
-            </div>
-
-            {/* <progress id="file" max={x} value={x}>
-              {" "}
-              70%{" "}
-            </progress> */}
+            {isPlaying ? (
+              <img
+                src="/Assets/pausa.png"
+                alt=""
+                onClick={() => togglePlayPause()}
+              />
+            ) : (
+              <img
+                src="/Assets/play.png"
+                alt=""
+                onClick={() => togglePlayPause()}
+              />
+            )}
+            <div id="waveform"></div>
           </div>
-
           <div className="content_buttons">
             <div className="content_a">
               <a href="/Assets/Audio/1.mp3" download>
@@ -76,7 +82,14 @@ const Song = () => {
             </div>
 
             <div className="button_two">
-              <button onClick={() => navigate("/")}>Volver a empezar</button>
+              <button
+                onClick={() => {
+                  CancelSound();
+                  navigate("/");
+                }}
+              >
+                Volver a empezar
+              </button>
             </div>
           </div>
         </div>
