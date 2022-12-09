@@ -6,22 +6,22 @@ const Footer = () => {
       <div className="footer_container containerAll">
         <div className="content_icons">
           <div className="youtube">
-            <img src="/assets/redesSociales/youtube.png" alt="" />
+            <img src="/assets/redes-sociales/youtube.png" alt="" />
           </div>
           <div className="instagram">
-            <img src="/assets/redesSociales/instagram.png" alt="" />
+            <img src="/assets/redes-sociales/instagram.png" alt="" />
           </div>
           <div className="facebook">
-            <img src="/assets/redesSociales/facebook.png" alt="" />
+            <img src="/assets/redes-sociales/facebook.png" alt="" />
           </div>
 
           <div className="spotify">
-            <img src="/assets/redesSociales/spotify.png" alt="" />
+            <img src="/assets/redes-sociales/spotify.png" alt="" />
           </div>
         </div>
 
         <div className="content_policy">
-          <a href="/assets/PdfPrueba.pdf" download>
+          <a href="/assets/pdfPrueba.pdf" download>
             Políticas de privacidad
           </a>
         </div>

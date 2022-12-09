@@ -29,7 +29,15 @@ const AboutYou = ({ search }) => {
       isSubmit &&
       valueDropdown !== "Selecciona tu parentesco"
     ) {
-      navigate("/song");
+      navigate("/descarga");
+    } else {
+      if (isSubmit) {
+        const animButton = document.querySelector(".button_one");
+        animButton.classList.add("anim_button");
+        setTimeout(() => {
+          animButton.classList.remove("anim_button");
+        }, 1000);
+      }
     }
   }, [formErrors]);
 
@@ -47,7 +55,6 @@ const AboutYou = ({ search }) => {
     } else if (!regex.test(values.email)) {
       errors.email = "Formato invalido";
     }
-
     if (!values.phone) {
       errors.phone = "Tu teléfono es requerido";
     }
@@ -73,6 +80,16 @@ const AboutYou = ({ search }) => {
               <div className="input">
                 <label htmlFor="name">Tu nombre </label>
                 <input
+                  onFocus={() => {
+                    document
+                      .querySelector(".input")
+                      .classList.add("anim_input");
+                  }}
+                  onBlur={() => {
+                    document
+                      .querySelector(".input")
+                      .classList.remove("anim_input");
+                  }}
                   type="text"
                   id="name"
                   name="name"
@@ -88,9 +105,17 @@ const AboutYou = ({ search }) => {
                   ""
                 )}
               </div>
-              <div className="input">
+              <div className="input i2">
                 <label htmlFor="apellido">Tu apellido</label>
                 <input
+                  onFocus={() => {
+                    document.querySelector(".i2").classList.add("anim_input");
+                  }}
+                  onBlur={() => {
+                    document
+                      .querySelector(".i2")
+                      .classList.remove("anim_input");
+                  }}
                   type="text"
                   id="apellido"
                   name="lastName"
@@ -106,9 +131,17 @@ const AboutYou = ({ search }) => {
                   ""
                 )}
               </div>
-              <div className="input">
+              <div className="input i3">
                 <label htmlFor="email">Tu email</label>
                 <input
+                  onFocus={() => {
+                    document.querySelector(".i3").classList.add("anim_input");
+                  }}
+                  onBlur={() => {
+                    document
+                      .querySelector(".i3")
+                      .classList.remove("anim_input");
+                  }}
                   type="email"
                   id="email"
                   name="email"
@@ -127,9 +160,17 @@ const AboutYou = ({ search }) => {
             </div>
 
             <div className="content_flex_two">
-              <div className="input">
+              <div className="input i4">
                 <label htmlFor="phone">Tu teléfono móvil</label>
                 <input
+                  onFocus={() => {
+                    document.querySelector(".i4").classList.add("anim_input");
+                  }}
+                  onBlur={() => {
+                    document
+                      .querySelector(".i4")
+                      .classList.remove("anim_input");
+                  }}
                   type="text"
                   id="phone"
                   name="phone"
@@ -156,12 +197,12 @@ const AboutYou = ({ search }) => {
                 <div className={`${!dropdownActive ? "img" : "img2"}`}>
                   <img src="/assets/abajo.png" alt="" />
                 </div>
-                <p className="info-dropdown">{valueDropdown}</p>
+                <p className="info">{valueDropdown}</p>
 
                 {valueDropdown === "Selecciona tu parentesco" && isSubmit ? (
                   <div className="alert">
                     <img src="/assets/error.png" alt="" />
-                    <p> Tu parentesco es requerido</p>
+                    <p>Tu parentesco es requerido</p>
                   </div>
                 ) : (
                   ""

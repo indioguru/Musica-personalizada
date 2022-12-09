@@ -18,6 +18,8 @@
       bottom: -25px;
       left: 25px;
       font-family: $font-one;
+      animation: zoomIn;
+      animation-duration: 0.3s;
     }
 
     .alert img {
@@ -38,6 +40,12 @@
       .input {
         margin: 50px 0px;
         position: relative;
+        transition: scale, 0.4s ease;
+      }
+
+      .anim_input {
+        transform: scale(1.15);
+        transition: scale, 0.4s ease;
       }
 
       .input input {
@@ -50,11 +58,6 @@
         font-family: $font-one;
         position: absolute;
         bottom: 55px;
-      }
-
-      .input input:focus {
-        transform: scale(1.05);
-        transition: scale, 0.4s ease;
       }
     }
 
@@ -128,9 +131,21 @@
       color: $letter-color-one;
     }
 
+    .info {
+      font-family: $font-one;
+      color: $color-label;
+      position: absolute;
+      padding: 10px;
+    }
+
     .button_one {
       padding-top: 50px;
       padding-bottom: 50px;
+    }
+
+    .anim_button {
+      animation: headShake;
+      animation-duration: 1s;
     }
   }
 }

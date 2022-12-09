@@ -6,7 +6,6 @@ const NamePage = ({ setSearch, search }) => {
   const navigate = useNavigate();
   const [isInputShow, setIsInputShow] = useState(false);
   const [allNames, setAllNames] = useState([]);
-
   const [usersFilter, setUsersFilter] = useState([]);
   const [allowedContinue, setAllowedContinue] = useState(true);
 
@@ -15,12 +14,17 @@ const NamePage = ({ setSearch, search }) => {
     setUsersFilter(nombres.nombre);
   }, []);
 
+  const showButton = () => {
+    const button = document.querySelector(".button_one");
+    button.classList.toggle("menu_hide");
+  };
+
   const checkName = () => {
     let valueSearch = search.toString().toLowerCase();
     for (let i = 0; i < allNames.length; i++) {
       if (allNames[i].nombre.toString().toLowerCase() === valueSearch) {
         setAllowedContinue(true);
-        navigate("/aboutYou");
+        navigate("/sobre-ti");
         setSearch(search);
         break;
       } else {
@@ -93,10 +97,7 @@ const NamePage = ({ setSearch, search }) => {
               type="text"
               onClick={() => setIsInputShow(true)}
             />
-            <div
-              className="listNames"
-              style={{ display: isInputShow ? "block" : "none" }}
-            >
+            <div className={`${isInputShow ? "listNames" : "listNamesClose"}`}>
               {usersFilter.map((item, i) =>
                 i < 4 ? (
                   <p
@@ -113,7 +114,10 @@ const NamePage = ({ setSearch, search }) => {
             </div>
           </div>
 
-          <div className="button_one">
+          <div
+            className={search.length >= 2 ? "button_one" : "butto_one_close"}
+            // style={{ opacity: search.length >= 2 ? "1" : "0" }}
+          >
             <button onClick={() => checkName()}>Enviar</button>
           </div>
         </div>

@@ -16,11 +16,11 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
-          path="/namePage"
+          path="/nombre"
           element={<NamePage setSearch={setSearch} search={search} />}
         />
-        <Route path="/aboutYou" element={<AboutYou search={search} />} />
-        <Route path="/song" element={<Song />} />
+        <Route path="/sobre-ti" element={<AboutYou search={search} />} />
+        <Route path="/descarga" element={<Song search={search} />} />
       </Routes>
       <Footer />
     </HashRouter>

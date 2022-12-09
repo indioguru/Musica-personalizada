@@ -12,7 +12,7 @@ const Home = () => {
         </div>
         <div className="content_buttons">
           <div className="button_one">
-            <button onClick={() => navigate("/namePage")}>Empezar</button>
+            <button onClick={() => navigate("/nombre")}>Empezar</button>
           </div>
 
           <div className="button_two">

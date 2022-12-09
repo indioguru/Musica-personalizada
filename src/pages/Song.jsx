@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import WaveSurfer from "wavesurfer.js";
-const Song = () => {
+const Song = ({ search }) => {
   const navigate = useNavigate();
 
   const [isPlaying, setIsPlaying] = useState(false);
@@ -25,7 +25,7 @@ const Song = () => {
 
   useEffect(() => {
     if (waveSurfer) {
-      waveSurfer.load("/assets/Audio/1.mp3");
+      waveSurfer.load("/assets/audio/1.mp3");
     }
   }, [waveSurfer]);
 
@@ -57,7 +57,7 @@ const Song = () => {
               descargarla.
             </span>
           </h1>
-          <audio id="audio" src="/assets/Audio/1.mp3"></audio>
+          <audio id="audio" src="/assets/audio/1.mp3"></audio>
           <div className="content_audio">
             {isPlaying ? (
               <img
@@ -76,7 +76,10 @@ const Song = () => {
           </div>
           <div className="content_buttons">
             <div className="content_a">
-              <a href="/assets/Audio/1.mp3" download>
+              <a
+                href="/assets/audio/1.mp3"
+                download={`Tu canción personalizada - ${search}`}
+              >
                 Descargar
               </a>
             </div>

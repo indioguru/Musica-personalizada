@@ -80,39 +80,45 @@
 //---------------------Fuentes--------------------------//
 @font-face {
   font-family: "sans-mediun";
-  src: url("/Assets/notoSans/NotoSans-Medium.ttf") format("truetype"),
-    url("/Assets/notoSans/NotoSans-medium/NotoSans-Medium.eot") format("eot"),
-    url("/Assets/notoSans/NotoSans-medium/NotoSans-Medium.woff") format("woff"),
-    url("/Assets/notoSans/NotoSans-medium/NotoSans-Medium.woff2")
+  src: url("/public/assets/notoSans/noto-sans-medium.ttf") format("truetype"),
+    url("/public/assets/notoSans/noto-sans-medium/noto-sans-medium.eot")
+      format("eot"),
+    url("/public/assets/notoSans/noto-sans-medium/noto-sans-medium.woff")
+      format("woff"),
+    url("/public/assets/notoSans/noto-sans-medium/noto-sans-medium.woff2")
       format("woff2");
 }
 
 @font-face {
   font-family: "sans-bold";
-  src: url("/Assets/notoSans/NotoSans-Bold.ttf") format("truetype"),
-    url("/Assets/notoSans/NotoSans-bold/NotoSans-Bold.eot") format("eot"),
-    url("/Assets/notoSans/NotoSans-bold/NotoSans-Bold.woff") format("woff"),
-    url("/Assets/notoSans/NotoSans-bold/NotoSans-Bold.woff2") format("woff2");
+  src: url("/public/assets/notoSans/noto-sans-bold.ttf") format("truetype"),
+    url("/public/assets/notoSans/noto-sans-bold/noto-sans-bold.eot")
+      format("eot"),
+    url("/public/assets/notoSans/noto-sans-bold/noto-sans-bold.woff")
+      format("woff"),
+    url("/public/assets/notoSans/noto-sans-bold/noto-sans-bold.woff2")
+      format("woff2");
 }
 
 @font-face {
   font-family: "sans-regular";
-  src: url("/Assets/notoSans/NotoSans-Regular.ttf") format("truetype"),
-    url("/Assets/notoSans/NotoSans-regular/NotoSans-Regular.eot") format("eot"),
-    url("/Assets/notoSans/NotoSans-regular/NotoSans-Regular.woff")
+  src: url("/public/assets/notoSans/noto-sans-regular.ttf") format("truetype"),
+    url("/public/assets/notoSans/noto-sans-regular/noto-sans-regular.eot")
+      format("eot"),
+    url("/public/assets/notoSans/noto-sans-regular/noto-sans-regular.woff")
       format("woff"),
-    url("/Assets/notoSans/NotoSans-regular/NotoSans-Regular.woff2")
+    url("/public/assets/notoSans/noto-sans-regular/noto-sans-regular.woff2")
       format("woff2");
 }
 
 @font-face {
   font-family: "sans-semibold";
-  src: url("/Assets/notoSans/NotoSans-SemiBold.ttf") format("truetype"),
-    url("/Assets/notoSans/NotoSans-semibold/NotoSans-SemiBold.eot")
+  src: url("/public/assets/notoSans/noto-sans-semiBold.ttf") format("truetype"),
+    url("/public/assets/notoSans/noto-sans-semiBold/noto-sans-semiBold.eot")
       format("eot"),
-    url("/Assets/notoSans/NotoSans-semibold/NotoSans-SemiBold.woff")
+    url("/public/assets/notoSans/noto-sans-semiBold/noto-sans-semiBold.woff")
       format("woff"),
-    url("/Assets/notoSans/NotoSans-semibold/NotoSans-SemiBold.woff2")
+    url("/public/assets/notoSans/noto-sans-semiBold/noto-sans-semiBold.woff2")
       format("woff2");
 }
 
